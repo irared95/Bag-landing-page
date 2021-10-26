@@ -33,14 +33,15 @@
         margin-bottom: 55px;
         border-radius: 10px;
         height: 66%;
+        transition: transform .2s linear;
         &:hover {
-            opacity: 1;
             transform: scale(1.1);
-            transition: all .2s linear;
         }
     }
-    &__img {
+    &__link {
         display: block;
+    }
+    &__img {
         transform: translateY(30px);
         img {
             display: block;
