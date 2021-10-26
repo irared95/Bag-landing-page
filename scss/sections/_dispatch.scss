@@ -8,9 +8,8 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        // min-height: 550px;
-        // width: 100%;
         border-radius: 10px;
+        overflow: hidden;
         @include breakpoint($mobile-bp) {
             flex-direction: column;
             align-items: center;
@@ -18,19 +17,28 @@
         }
     }
     &__left {
+        position: relative;
         background-image: url(../image/form-bag.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         width: 40%;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: block;
+            background-color: rgba(47, 47, 47, 0.6);
+            z-index: 1;
+            pointer-events: none;
+        }
         @include breakpoint($mobile-bp) {
             display: flex;
             flex-direction: column;
             width: 100%;
-        }
-    }
-    &__img {
-        @include breakpoint($mobile-bp) {
             height: 312px;
         }
     }
@@ -64,16 +72,21 @@
     &__field {
         display: inline-block;
         margin-right: 50px;
-        @include breakpoint($mobile-bp) {
-            margin-right: 0;
-        }
         @include breakpoint($tablet-bp) {
             margin-right: 0;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
         &:last-child {
             margin-right: 0;
         }
+        &-adr {
+            margin-bottom: 30px;
+        }
         &-wrap {
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             @include breakpoint($mobile-bp) {
@@ -91,12 +104,14 @@
         padding: 18px 30px 18px;
         font-size: 16px;
         font-family: $poppins-regular;
-        color: $white;
+        color: $gray-dark;
         line-height: 18px;
-        border: 1px solid $white;
+        border: 1px solid $gray-dark;
         border-radius: 10px;
-        transition: all 0.2s linear;
-        margin-bottom: 30px;
+        transition: border-color 0.2s linear;
+        &:focus {
+            border-color: $white;
+        }
         &::placeholder {
             font-size: 16px;
             font-family: $poppins-regular;
@@ -113,8 +128,9 @@
         width: 12px;
         height: 12px;
         background-color: $second-black;
-        border: 1px solid $white;
+        border: 1px solid $gray-dark;
         color: transparent;
+        border-radius: 1px;
     }
     &__label {
         line-height: 20px;
