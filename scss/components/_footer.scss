@@ -1,0 +1,131 @@
+.footer {
+    position: relative;
+    padding: 97px 0;
+    background-image: url(../image/footer-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        background-color: rgba(47, 47, 47, 0.92);
+        z-index: 1;
+    }
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        z-index: 2;
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__info {
+        width: 23%;
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &-text {
+            font-family: $poppins-regular;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            opacity: 0.7;
+            width: 100%;
+            @include breakpoint($mobile-bp) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__logo {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    &__catagories,
+    &__contacts {
+        width: 23%;
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &-title {
+            font-family: $poppins-medium;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            @include breakpoint($mobile-bp) {
+                margin-bottom: 10px;
+            }
+        }
+        &-item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-link {
+            font-family: $poppins-regular;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            opacity: 0.7;
+            display: inline-block;
+            word-break: break-all;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__catagories {
+        text-transform: capitalize;
+    }
+    &__form {
+        width: 23%;
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+        }
+        &-field {
+            margin-bottom: 30px;
+        }
+        &-title {
+            font-family: $poppins-medium;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        &-input {
+            width: 100%;
+            background-color: transparent;
+            padding: 15px 24px 15px;
+            font-size: 16px;
+            font-family: $poppins-regular;
+            color: $white;
+            line-height: 18px;
+            border: 1px solid #B0A9A9;
+            border-radius: 5px;
+            transition: all 0.2s linear;
+            &::placeholder {
+                font-size: 16px;
+                font-family: $poppins-regular;
+                color: $white;
+                line-height: 18px;
+                opacity: .35;
+            }
+        }
+    }
+}

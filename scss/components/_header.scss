@@ -1,0 +1,43 @@
+.header {
+    background-image: url(../image/hero-bg.png);
+    padding-top: 30px;
+    &__wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    &__menu {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 90px;
+            @include breakpoint($mobile-bp) {
+                margin-right: 40px;
+            }
+        }
+    }
+    &__link {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: $poppins-medium, $sans-serif;
+        color: $white;
+        line-height: 18px;
+        transition: all .2s linear;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}

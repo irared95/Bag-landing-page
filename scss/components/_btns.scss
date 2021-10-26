@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: $poppins-medium;
+    color: $white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: $dark-yellow;
+    text-transform: uppercase;
+    transition: all .2s linear;
+    &:hover {
+        opacity: 0.5;
+    }
+}

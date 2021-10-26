@@ -1,0 +1,163 @@
+.dispatch {
+    padding: 65px 0 130px;
+    @include breakpoint($mobile-bp) {
+        padding: 90px 0px;
+    }
+    &__wrapper {
+        background-color: $second-black;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        // min-height: 550px;
+        // width: 100%;
+        border-radius: 10px;
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__left {
+        background-image: url(../image/form-bag.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 40%;
+        @include breakpoint($mobile-bp) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    &__img {
+        @include breakpoint($mobile-bp) {
+            height: 312px;
+        }
+    }
+    &__right {
+        width: 60%;
+        padding: 104px 70px;
+        @include breakpoint($tablet-bp) {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        @include breakpoint($mobile-bp) {
+            width: 100%;
+            padding: 62px 24px;
+        }
+        &-title {
+            font-family: $poppins-bold;
+            color: $white;
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 44px;
+            text-transform: capitalize;
+            @include breakpoint($tablet-bp) {
+                text-align: center;
+            }
+            @include breakpoint($mobile-bp) {
+                font-size: 24px;
+            }
+        }
+    }
+    &__field {
+        display: inline-block;
+        margin-right: 50px;
+        @include breakpoint($mobile-bp) {
+            margin-right: 0;
+        }
+        @include breakpoint($tablet-bp) {
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            @include breakpoint($mobile-bp) {
+                flex-direction: column;
+            }
+            @include breakpoint($tablet-bp) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__input,
+    &__address {
+        width: 100%;
+        background-color: transparent;
+        padding: 18px 30px 18px;
+        font-size: 16px;
+        font-family: $poppins-regular;
+        color: $white;
+        line-height: 18px;
+        border: 1px solid $white;
+        border-radius: 10px;
+        transition: all 0.2s linear;
+        margin-bottom: 30px;
+        &::placeholder {
+            font-size: 16px;
+            font-family: $poppins-regular;
+            color: $white;
+            line-height: 18px;
+            opacity: .35;
+        }
+    }
+    &__address {
+        width: 100%;
+    }
+    &__indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: $second-black;
+        border: 1px solid $white;
+        color: transparent;
+    }
+    &__label {
+        line-height: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: $poppins-regular;
+        color: $white;
+        display: flex;
+        align-items: center;
+        &-text {
+            padding-left: 10px;
+            opacity: .35;
+        }
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 20px;
+        }
+    }
+    &__checkbox {
+        display: none;
+        cursor: pointer;
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include breakpoint($tablet-bp) {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+    &__checkbox:checked+.dispatch__indicator {
+        color: $dark-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn {
+        &-wrap {
+            display: inline-block;
+            margin-left: 50px;
+            @include breakpoint($tablet-bp) {
+                margin-left: 0;
+            }
+        }
+    }
+}

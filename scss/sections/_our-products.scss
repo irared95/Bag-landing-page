@@ -1,0 +1,81 @@
+.our-products {
+    padding: 130px 0 65px;
+    &__wrap {
+        text-align: center;
+    }
+    &__title {
+        font-family: $poppins-bold;
+        font-size: 30px;
+        line-height: 32px;
+        color: $second-black;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+    }
+    &__text {
+        font-family: $poppins-regular;
+        font-size: 16px;
+        line-height: 20px;
+        color: $second-black;
+        opacity: .9;
+        max-width: 510px;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 60px;
+        text-transform: capitalize;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    &__item {
+        margin-bottom: 55px;
+        border-radius: 10px;
+        height: 66%;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            transition: all .2s linear;
+        }
+    }
+    &__img {
+        display: block;
+        transform: translateY(30px);
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__btn {
+        &-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+        color: $dark-yellow;
+        padding: 15px 30px;
+        margin: 0 auto;
+        text-transform: capitalize;
+        &:after {
+            content: '';
+            background-image: url(../image/arrow.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: 24px;
+            height: 16px;
+            margin-left: 10px;
+            display: block;
+        }
+        &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.partners {
+    padding: 130px 0;
+    @include breakpoint($mobile-bp) {
+        padding: 40px 0 112px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
