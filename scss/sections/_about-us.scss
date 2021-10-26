@@ -15,8 +15,16 @@
             width: 100%;
         }
     }
+    &__left {
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 30px;
+        }
+    }
     &__right {
         padding-left: 100px;
+        @include breakpoint($tablet-bp) {
+            padding-left: 40px;
+        }
         @include breakpoint($mobile-bp) {
             padding-left: 0;
             text-align: center;
