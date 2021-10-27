@@ -47,8 +47,12 @@
         // }
     }
     &__img {
+        display: none;
         border: 1px solid #A3A3A3;
         border-radius: 10px;
+        &.active {
+            display: block;
+        }
         img {
             display: block;
             width: 100%;
