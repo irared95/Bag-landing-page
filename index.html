@@ -18,7 +18,7 @@
                         <img src="../image/logo.png" alt="logo">
                     </a>
                     <nav class="nav">
-                        <ul class="nav__menu">
+                        <ul class="nav__menu nav__menu--js">
                             <li class="nav__item">
                                 <a class="nav__link" href="#">Home</a>
                             </li>
@@ -32,7 +32,7 @@
                                 <a class="nav__link" href="#">Product</a>
                             </li>
                         </ul>
-                        <button class="burger">
+                        <button class="burger burger--js">
                             &#8801;
                         </button>
                         <div class="header__btn">
@@ -63,40 +63,26 @@
     <main class="main">
         <section class="feature">
             <div class="container">
-                <ul class="feature__list">
-                    <li class="feature__item">
-                        <a href="#" class="feature__link">
-                            <h3 class="feature__title">Water resistant</h3>
-                            <div class="feature__img active">
-                                <img src="/image/tab-bag-img1.png" alt="bag">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="feature__item">
-                        <a href="#" class="feature__link">
-                            <h3 class="feature__title">Charging system</h3>
-                            <div class="feature__img">
-                                <img src="/image/tab-bag-img2.png" alt="bag">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="feature__item">
-                        <a href="#" class="feature__link">
-                            <h3 class="feature__title">Artificial leather</h3>
-                            <div class="feature__img">
-                                <img src="/image/tab-bag-img3.png" alt="bag">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="feature__item">
-                        <a href="#" class="feature__link">
-                            <h3 class="feature__title">Modern clothes</h3>
-                            <div class="feature__img">
-                                <img src="/image/tab-bag-img4.png" alt="bag">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <div class="feature__tab">
+                    <button class="feature__tab-btn feature__tab-btn--js active" type="button" data-tab="#tab_1">Water resistant</button>
+                    <button class="feature__tab-btn feature__tab-btn--js" type="button" data-tab="#tab_2">Charging system</button>
+                    <button class="feature__tab-btn feature__tab-btn--js" type="button" data-tab="#tab_3">Artificial leather</button>
+                    <button class="feature__tab-btn feature__tab-btn--js" type="button" data-tab="#tab_4">Modern clothes</button>
+                </div>
+                <div class="feature__content">
+                    <div class="feature__content-item feature__content-item--js active" id="tab_1">
+                        <img src="/image/tab-bag-img1.png" alt="bag">
+                    </div>
+                    <div class="feature__content-item feature__content-item--js" id="tab_2">
+                        <img src="/image/tab-bag-img2.png" alt="bag">
+                    </div>
+                    <div class="feature__content-item feature__content-item--js" id="tab_3">
+                        <img src="/image/tab-bag-img3.png" alt="bag">
+                    </div>
+                    <div class="feature__content-item feature__content-item--js" id="tab_4">
+                        <img src="/image/tab-bag-img4.png" alt="bag">
+                    </div>
+                </div>
             </div>
         </section>
         <section class="about-us">
@@ -250,6 +236,9 @@
                 </ul>
             </div>
         </section>
+        <section class="map" id="map">
+
+        </section>
         <section class="footer">
             <div class="container">
                 <div class="footer__wrap">
@@ -304,6 +293,7 @@
             </div>
         </section>
     </main>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPRKvahBs7bxZF4oFzd4o7RtUWBhykPD8&callback=initMap"></script>
     <script src="./js/main.js"></script>
 </body>
 
