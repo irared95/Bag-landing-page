@@ -1,5 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
+function initMap() {
+    const coordinates = {
+        lat: 49.659774441117634,
+        lng: 32.01388160816503
+    };
 
+    const map = new google.maps.Map(document.querySelector('#map'), {
+        center: coordinates,
+        zoom: 10
+    })
+
+    const marker = new google.maps.Marker({
+        position: coordinates,
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        // icon: {
+        //     url: 'marker.png',
+        //     scaledSize: {
+        //         width: 42,
+        //         height: 42
+        //     }
+        // }
+    });
+}
+
+initMap();
+
+document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger--js');
     const navMenu = document.querySelector('.nav__menu--js');
 
@@ -31,28 +57,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function initMap() {
-        const coordinates = {
-            lat: 49.659774441117634,
-            lng: 32.01388160816503
-        };
 
-        const map = new google.maps.Map(document.querySelector('#map'), {
-            center: coordinates,
-            zoom: 10
-        })
+    $('.partners__slider--js').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 300,
+        arrows: true,
+        dots: true,
+        dotsClass: 'dots partners__dots',
+        prevArrow: '<div class="partners__arrow-prev partners__arrow"><img src="./image/icon-arrow-left.png" alt="arrow"></div>',
+        nextArrow: '<div class="partners__arrow-next partners__arrow"><img src="./image/icon-arrow-right.png" alt="arrow"></div>',
 
-        const marker = new google.maps.Marker({
-            position: coordinates,
-            map: map,
-            animation: google.maps.Animation.BOUNCE,
-            // icon: {
-            //     url: 'marker.png',
-            //     scaledSize: {
-            //         width: 42,
-            //         height: 42
-            //     }
-            // }
-        });
-    }
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 });

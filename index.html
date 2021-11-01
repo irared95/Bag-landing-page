@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Bags</title>
 </head>
@@ -88,12 +89,12 @@
         <section class="about-us">
             <div class="container">
                 <div class="about-us__wrap">
-                    <div class="about-us__left">
+                    <div class="about-us__left animate__bounceOutLeft" data-wow-duration="1s">
                         <div class="about-us__image">
                             <img src="/image/three-bags.png" alt="three-bags">
                         </div>
                     </div>
-                    <div class="about-us__right">
+                    <div class="about-us__right animate__bounceOutRight" data-wow-duration="1s">
                         <p class="about-us__subtitle">Creative bag only for you.</p>
                         <h2 class="about-us__title">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.</h2>
                         <div class="about-us__text">
@@ -212,28 +213,50 @@
         </section>
         <section class="partners">
             <div class="container">
-                <ul class="partners__list">
-                    <li class="partners__item">
-                        <a href="# " target="blank ">
-                            <img src="/image/company-logo1.jpg " alt="partners 1">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a href="# " target="blank ">
-                            <img src="/image/company-logo2.jpg " alt="partners 2">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a href="# " target="blank ">
-                            <img src="/image/company-logo3.jpg " alt="partners 3">
-                        </a>
-                    </li>
-                    <li class="partners__item">
-                        <a href="# " target="blank ">
-                            <img src="/image/company-logo4.jpg " alt="partners 4">
-                        </a>
-                    </li>
-                </ul>
+                <div class="partners__wrap">
+                    <ul class="partners__slider partners__slider--js">
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo1.jpg " alt="partners 1">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo2.jpg " alt="partners 2">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo3.jpg " alt="partners 3">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo4.jpg " alt="partners 4">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo1.jpg " alt="partners 1">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo2.jpg " alt="partners 2">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo3.jpg " alt="partners 3">
+                            </a>
+                        </li>
+                        <li class="partners__slider-item">
+                            <a href="#" target="blank" class="partners__slider-link">
+                                <img src="/image/company-logo4.jpg " alt="partners 4">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="map" id="map">
@@ -293,7 +316,9 @@
             </div>
         </section>
     </main>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPRKvahBs7bxZF4oFzd4o7RtUWBhykPD8&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPRKvahBs7bxZF4oFzd4o7RtUWBhykPD8"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

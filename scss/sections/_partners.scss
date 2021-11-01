@@ -1,20 +1,41 @@
 .partners {
     padding: 130px 0;
-    @include breakpoint($mobile-bp) {
-        padding: 40px 0 112px;
-    }
-    &__list {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        @include breakpoint($mobile-bp) {
-            flex-direction: column;
+    &__slider {
+        &-link {
+            display: block;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                @include breakpoint($mobile-bp) {
+                    width: 90%;
+                }
+            }
         }
     }
-    &__item {
-        img {
-            display: block;
-            width: 100%;
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+        &-prev {
+            left: 0;
+        }
+        &-next {
+            right: 0;
+        }
+    }
+    &__dots {
+        position: absolute;
+        bottom: -56px;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+            margin-right: 40px;
+            @include breakpoint($mobile-bp) {
+                margin-right: 10px;
+            }
         }
     }
 }
