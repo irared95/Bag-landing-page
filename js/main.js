@@ -25,6 +25,8 @@ function initMap() {
 
 initMap();
 
+new WOW().init();
+
 document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger--js');
     const navMenu = document.querySelector('.nav__menu--js');
@@ -89,4 +91,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ]
     });
+
 });
